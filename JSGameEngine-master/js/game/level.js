@@ -22,9 +22,17 @@ class Level extends Game
         this.addGameObject(player);
         
         const platforms = [
-                    new Platform(0, this.canvas.height-40, 200, 20),
-                    new Platform(300, this.canvas.height-40, 200, 20),
-                    new Platform(600, this.canvas.height-80, 200, 60)
+                    new Platform(0, this.canvas.height-40, 200, 20, "green"),
+                    new Platform(300, this.canvas.height-40, 200, 20, "green"),
+                    new Platform(600, this.canvas.height-80, 200, 60, "green"),
+            new Platform(1000, this.canvas.height-60, 200, 20, "green"),
+            new Platform(1400, this.canvas.height-90, 200, 20, "green"),
+            new Platform(1800, this.canvas.height-20, 200, 20, "green"),
+            new Platform(2000, this.canvas.height-20, 200, 20, "green"),
+            new Platform(2300, this.canvas.height-60, 200, 20, "green"),
+            new Platform(2600, this.canvas.height-90, 200, 20, "green"),
+            new Platform(2900, this.canvas.height-50, 200, 20, "green"),
+            new Platform(3100, this.canvas.height-40, 200, 80, "green"),
         ];
         
         for(const platform of platforms)
@@ -35,6 +43,9 @@ class Level extends Game
         const Collectibles = [
             new Collectible(375,this.canvas.height-100),
             new Collectible(475,this.canvas.height-100),
+            new Collectible(975,this.canvas.height-100),
+            new Collectible(1475,this.canvas.height-100),
+            new Collectible(1975,this.canvas.height-100),
            
         ];
         
@@ -61,8 +72,8 @@ class Level extends Game
         
      
         this.addGameObject(ui);
-        ui.addGameObject(healthBar, this.canvas.width-200, 10);
-        this.addGameObject(new Checkpoint(450, this.canvas.height-100, 20,40, 'yellow'));
+        //ui.addGameObject(healthBar, this.canvas.width-200, 10);
+        this.addGameObject(new Checkpoint(450, this.canvas.height-100, 20,40, 'blue'));
     }
 }
 export default Level
