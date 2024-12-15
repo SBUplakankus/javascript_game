@@ -17,7 +17,7 @@ class Level extends Game
         
         const player = new Player(10, this.canvas.height - 100,50, 50, healthBar);
         
-        this.camera.confiner = new Confiner(0,0,2000,this.canvas.height);
+        this.camera.confiner = new Confiner(0,0,5000,this.canvas.height);
         this.camera.target = player;
         this.addGameObject(player);
         
@@ -32,7 +32,9 @@ class Level extends Game
             new Platform(2300, this.canvas.height-60, 200, 20, "green"),
             new Platform(2600, this.canvas.height-90, 200, 20, "green"),
             new Platform(2900, this.canvas.height-50, 200, 20, "green"),
-            new Platform(3100, this.canvas.height-40, 200, 80, "green"),
+            new Platform(3300, this.canvas.height-40, 200, 80, "green"),
+            new Platform(3700, this.canvas.height-60, 200, 80, "green"),
+            new Platform(4000, this.canvas.height-50, 200, 80, "blue")
         ];
         
         for(const platform of platforms)
@@ -43,9 +45,12 @@ class Level extends Game
         const Collectibles = [
             new Collectible(375,this.canvas.height-100),
             new Collectible(475,this.canvas.height-100),
-            new Collectible(975,this.canvas.height-100),
-            new Collectible(1475,this.canvas.height-100),
-            new Collectible(1975,this.canvas.height-100),
+            new Collectible(975,this.canvas.height-90),
+            new Collectible(1475,this.canvas.height-110),
+            new Collectible(1975,this.canvas.height-80),
+            new Collectible(2275,this.canvas.height-120),
+            new Collectible(2575,this.canvas.height-130),
+            new Collectible(2975,this.canvas.height-140),
            
         ];
         
@@ -56,7 +61,10 @@ class Level extends Game
         
         const enemies = [
             new Enemy(300, 100),
-            new Enemy(700, 100)
+            new Enemy(700, 100),
+            new Enemy(1700, 100),
+            new Enemy(2200, 100),
+            new Enemy(3500, 100)
             
         ];
         
